@@ -3,8 +3,8 @@
 # d e f i n e m y S e ri al S e r i a l 1
 A d a f r u i t F i n g e r p r i n t f i n g e r = A d a f r u i t F i n g e r p r i n t (& m y S e ri al ) ;
 u i n t 8 t i d ;
-c h a r s s i d [ ] = ”Ammuzzz ” ;
-c h a r p a s s [ ] = ” a d i i c c c c c ” ;
+c h a r s s i d [ ] = ”parvesh ” ;
+c h a r p a s s [ ] = ” hooda ” ;
 c h a r s e r v e r [ ] = ”www. s o u t h e r n v i b e s . i n ” ;
 S t r i n g u r i =” h t t p : / / www. s o u t h e r n v i b e s . i n / embedded / r v c s / r e s u l t . php ” ;
 S t r i n g a =”08008837BF08 ” ;
