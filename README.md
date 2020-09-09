@@ -49,8 +49,6 @@ e l s e
 {
 S e r i a l . p r i n t l n ( ” Did n ot f i n d f i n g e r p r i n t s e n s o r : ( ” ) ;
 w hil e ( 1 )
-Department of Electronics & Communication Engineering 50
-College of Engineering Cherthala APPENDIX
 {
 d e l a y ( 1 ) ;
 }
@@ -77,8 +75,6 @@ v oi d l o o p ( )
 i f ( S e r i a l . a v a i l a b l e ( ) )
 {
 i f ( g p s . e nc o de ( S e r i a l . r e a d ( ) ) )
-Department of Electronics & Communication Engineering 51
-College of Engineering Cherthala APPENDIX
 {
 g p s . f g e t p o s i t i o n (& l a t ,& l o n ) ;
 d e l a y ( 1 0 0 0 ) ;
@@ -106,8 +102,6 @@ r e t u r n ;
 S e r i a l . p r i n t ( ” E n r o l l i n g ID # ” ) ;
 S e r i a l . p r i n t l n ( i d ) ;
 w hil e ( ! g e t F i n g e r p r i n t E n r o l l ( ) ) ;
-Department of Electronics & Communication Engineering 52
-College of Engineering Cherthala APPENDIX
 }
 i f ( d i g i t a l R e a d ( Swit c h 2 )==HIGH )
 {
@@ -135,8 +129,6 @@ d e l a y ( 1 0 0 0 ) ;
 S e r i a l . p r i n t l n ( ”* * * * * The GPS R e c ei v e d S i g n a l * * * * * ” ) ;
 S e r i a l . p r i n t ( ” P o s i t i o n : ” ) ;
 S e r i a l . p r i n t ( ” h t t p : / / maps . g o o gl e . com / maps ? q= l o c : ” ) ;
-Department of Electronics & Communication Engineering 53
-College of Engineering Cherthala APPENDIX
 S e r i a l . p r i n t ( l a t == TinyGPS : : GPS INVALID F ANGLE ? 0 . 0 : l a t , 6 ) ;
 S e r i a l . p r i n t ( l a t ) ;
 S e r i a l . p r i n t ( ” , ” ) ;
@@ -166,8 +158,6 @@ h t t p p o s t ( ) ;
 d e l a y ( 2 0 0 0 ) ;
 t o l l = 0;
 }
-Department of Electronics & Communication Engineering 54
-College of Engineering Cherthala APPENDIX
 } # d e f i n e Moto r1 7
 f l o a t v a l u e = 0;
 f l o a t r e v = 0;
@@ -226,8 +216,6 @@ g p s . f g e t p o s i t i o n (& l a t ,& l o n ) ;
 d e l a y ( 1 0 0 0 ) ;
 g p s . c r a c k d a t e t i m e (& y e a r ,&month ,& day ,& hou r ,& mi n ute ,& s e c o n d ) ;
 }
-Department of Electronics & Communication Engineering 56
-College of Engineering Cherthala APPENDIX
 }
 i f ( c o u nt ==0 )
 {
@@ -254,8 +242,6 @@ w hil e ( ! g e t F i n g e r p r i n t E n r o l l ( ) ) ;
 i f ( d i g i t a l R e a d ( Swit c h 2 )==HIGH )
 {
 w hil e ( d i g i t a l R e a d ( Swit c h 2 )==HIGH ) ;
-Department of Electronics & Communication Engineering 57
-College of Engineering Cherthala APPENDIX
 S e r i a l . p r i n t l n ( ” W aiti n g f o r v a l i d f i n g e r . . . ” ) ;
 d e l a y ( 5 0 0 0 ) ;
 g e t F i n g e r p r i n t I D e z ( ) ;
@@ -284,8 +270,6 @@ S e r i a l . p r i n t ( l a t == TinyGPS : : GPS INVALID F ANGLE ? 0 . 0 : l a
 S e r i a l . p r i n t ( l a t ) ;
 S e r i a l . p r i n t ( ” , ” ) ;
 S e r i a l . p r i n t ( l o n ==
-Department of Electronics & Communication Engineering 58
-College of Engineering Cherthala APPENDIX
 TinyGPS : : GPS INVALID F ANGLE ? 0 . 0 : l o n , 6 ) ;
 S e r i a l . p r i n t l n ( l o n ) ;
 d e l a y ( 2 0 0 ) ;
@@ -315,8 +299,6 @@ S e r i a l . p r i n t l n ( ” Speed l i m i t a r e a
 a n al o gW rit e ( Motor , 1 0 0 ) ;
 d e l a y ( 1 0 0 0 ) ;
 }
-Department of Electronics & Communication Engineering 59
-College of Engineering Cherthala APPENDIX
 i f ( t o l l i d g e t == n o rm al s p e e d 1 )
 {
 S e r i a l . p r i n t l n ( ”NORMAL SPEED . . . . . . . . . . . . . . ” ) ;
@@ -345,8 +327,6 @@ d e l a y ( 2 0 0 0 ) ;
 t o l l = 0;
 }
 }
-Department of Electronics & Communication Engineering 60
-College of Engineering Cherthala APPENDIX
 u i n t 8 t g e t F i n g e r p r i n t I D ( )
 {
 u i n t 8 t p = f i n g e r . g et Im a g e ( ) ;
@@ -374,8 +354,6 @@ s w i t c h ( p )
 c a s e FINGERPRINT OK :
 S e r i a l . p r i n t l n ( ” Image c o n v e r t e d ” ) ;
 b r e a k ;
-Department of Electronics & Communication Engineering 61
-College of Engineering Cherthala APPENDIX
 c a s e FINGERPRINT IMAGEMESS :
 S e r i a l . p r i n t l n ( ” Image t o o messy ” ) ;
 r e t u r n p ;
@@ -403,8 +381,6 @@ e l s e i f ( p == FINGERPRINT PACKETRECIEVEERR )
 S e r i a l . p r i n t l n ( ” Communication e r r o r ” ) ;
 r e t u r n p ;
 }
-Department of Electronics & Communication Engineering 62
-College of Engineering Cherthala APPENDIX
 e l s e i f ( p == FINGERPRINT NOTFOUND ) {
 S e r i a l . p r i n t l n ( ” Did n ot f i n d a match ” ) ;
 r e t u r n p ;
@@ -428,8 +404,6 @@ p = f i n g e r . image2Tz ( ) ;
 i f ( p != FINGERPRINT OK ) r e t u r n −1;
 p = f i n g e r . f i n g e r F a s t S e a r c h ( ) ;
 i f ( p != FINGERPRINT OK ) r e t u r n −1;
-Department of Electronics & Communication Engineering 63
-College of Engineering Cherthala APPENDIX
 S e r i a l . p r i n t ( ” Found ID # ” ) ;
 S e r i a l . p r i n t ( f i n g e r . f i n g e r I D ) ;
 S e r i a l . p r i n t ( ” wit h c o n f i d e n c e o f ” ) ;
@@ -457,8 +431,6 @@ c a s e FINGERPRINT NOFINGER :
 S e r i a l . p r i n t l n ( ” . ” ) ;
 b r e a k ;
 c a s e FINGERPRINT PACKETRECIEVEERR :
-Department of Electronics & Communication Engineering 64
-College of Engineering Cherthala APPENDIX
 S e r i a l . p r i n t l n ( ” Communication e r r o r ” ) ;
 b r e a k ;
 c a s e FINGERPRINT IMAGEFAIL :
@@ -488,8 +460,6 @@ S e r i a l . p r i n t l n ( ” Could n ot f i n d f i n g e r p r i n t f e a
 r e t u r n p ;
 d e f a u l t :
 S e r i a l . p r i n t l n ( ” Unknown e r r o r ” ) ;
-Department of Electronics & Communication Engineering 65
-College of Engineering Cherthala APPENDIX
 r e t u r n p ;
 }
 S e r i a l . p r i n t l n ( ” Remove f i n g e r ” ) ;
@@ -549,8 +519,6 @@ d e f a u l t :
 S e r i a l . p r i n t l n ( ” Unknown e r r o r ” ) ;
 r e t u r n p ;
 }
-Department of Electronics & Communication Engineering 67
-College of Engineering Cherthala APPENDIX
 S e r i a l . p r i n t ( ” C r e a t i n g model f o r # ” ) ;
 S e r i a l . p r i n t l n ( i d ) ;
 p = f i n g e r . c r e at eM o d el ( ) ;
@@ -605,8 +573,6 @@ r e t u r n p ;
 v oi d r e s e t ( )
 {
 S e r i a l 2 . p r i n t l n ( ”AT+RST ” ) ;
-Department of Electronics & Communication Engineering 69
-College of Engineering Cherthala APPENDIX
 d e l a y ( 5 0 0 0 ) ;
 i f ( S e r i a l 2 . f i n d ( ”OK” ) )
 {
