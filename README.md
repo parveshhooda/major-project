@@ -21,7 +21,6 @@ TinyGPS g p s ;
 f l o a t l a t , l o n ;
 i n t y e a r ;
 49
-College of Engineering Cherthala APPENDIX
 b yt e month , day , hou r , mi n ute , s e c o n d ;
 # d e f i n e Swit c h 1 A0
 # d e f i n e Swit c h 2 A1
