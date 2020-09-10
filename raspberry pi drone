@@ -1,0 +1,70 @@
+sudo apt-get update // update the raspbian OS
+sudo apt-get install motion // instal motion library
+sudo nano /etc/default/motion // set motion daemon to yes
+sudo chown motion:motion /var/lib/motion/ //to save the video
+sudo nano /etc/motion/motion.conf // turn off local host
+sudo /etc/init.d/motion restart // start recording video
+import serial
+usbCom = serial.Serial('/dev/ttyACM0',9600)
+usbCom.open()
+from flask import Flask
+from flask import render_template, request
+import RPi.GPIO as GPIO
+app = Flask(android)
+PYTHON PROGRAM FOR RASPBERRY
+If @app.route(event.orientation.X)== ‘10’
+{usbCom.write( ' 10' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘20’
+{usbCom.write( ' 20' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘40’
+{usbCom.write( ' 40 ' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘22’
+{usbCom.write( ' 22' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘25’
+{usbCom.write( ' 25 ' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘30’
+{usbCom.write( '30' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘61’
+{usbCom.write( '61' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘62’
+{usbCom.write( '62' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘63’
+{usbCom.write( '63' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘64’
+{usbCom.write( '64' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘60’
+{usbCom.write( '60' ) // for writing to arduino
+}
+Value=usbCom.read()
+Print value
+app.run(host='0.0.0.0',port=5010)
+If @app.route(event.orientation.X)== ‘60’
+{usbCom.write( ' 60' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘45’
+{usbCom.write( ' 45’) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘55’
+{usbCom.write( '55' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘46’
+{usbCom.write( ' 46 ' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘56’
+{usbCom.write( '56' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘44’
+{usbCom.write( ' 44' ) // for writing to arduino
+}
+If @app.route(event.orientation.X)== ‘54’
+{usbCom.write( '54' ) // for writing to arduino
