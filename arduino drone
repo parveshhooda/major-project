@@ -1,0 +1,142 @@
+#define lmotorpin1 5
+#define lmotorpin2 6
+#define rmotorpin1 10
+#define rmotorpin2 11
+#define sensor 2
+#define led 4
+#define lpgsensor A0
+#define MQ4sensor A1
+#define MQ7sensor A2
+#define ldrsensor A3
+#define umotorpin1 1
+#define umotorpin2 3
+#define cmotorpin1 7
+#define cmotorpin2 8
+#define bmotorepin1 9
+#define bmotorpin2 12
+void setup()
+{
+Serial.begin(9600); //read from raspberry serially
+pinMode(sensor,INPUT); //infrared sensor to make it run as a line follower
+pinMode(lmotorpin1,OUTPUT);
+pinMode(lmotorpin2,OUTPUT);
+pinMode(rmotorpin1,OUTPUT);
+pinMode(rmotorpin2,OUTPUT);
+pinMode(led,OUTPUT); //led glowing
+pinMode(lpgsensor,INPUT); //ISOBUTENE,BUTANE,LPG SENSOR
+pinMode(MQ4sensor,INPUT); //METHAN,NATURAL GAS SENSOR
+pinMode(MQ7sensor,INPUT); //CARBON MOOXIDE SENSOR
+pinMode(ldrsensor,INPUT); //for fire detection
+pinMode(umotorpin1,OUTPUT);
+pinMode(umotorpin2,OUTPUT);
+pinMode(cmotorpin1,OUTPUT);
+pinMode(cmotorpin2,OUTPUT);
+pinMode(bmotorpin1,OUTPUT);
+pinMode(bmotorpin2,OUTPUT);
+}
+void loop()
+{
+if(Serial.available() ) {
+usbRead = Serial.read() ; } // usb read contains instruction
+send from raspberry
+If(usbread==’60’) //loop for line follower if command received is 60
+( here 60 is x axis cordinate)
+{
+sensorstate=digitalRead(sensor);
+if(sensorstate==HIGH){
+digitalWrite(lmotorpin1,HIGH);
+digitalWrite(lmotorpin2,LOW);
+digitalWrite(rmotorpin1,LOW);
+digitalWrite(rmotorpin2,LOW);
+}
+else{
+digitalWrite(rmotorpin1,LOW);
+digitalWrite(rmotorpin2,HIGH);
+digitalWrite(lmotorpin1,LOW);
+digitalWrite(lmotorpin2,LOW);
+}
+}
+}
+If(usbread==’20’) //loop to move forward
+{
+digitalWrite(rmotorpin1,HIGH);
+digitalWrite(rmotorpin2,LOW);
+digitalWrite(lmotorpin1,HIGH);
+digitalWrite(lmotorpin2,LOW);
+}
+If(usbread==’22’) //loop to move backward
+{
+digitalWrite(rmotorpin1,LOW);
+digitalWrite(rmotorpin2,HIGH);
+digitalWrite(lmotorpin1,LOW);
+digitalWrite(lmotorpin2,HIGH);
+}
+If(usbread==’10’) //loop to move left
+{
+digitalWrite(rmotorpin1,HIGH);
+digitalWrite(rmotorpin2,LOW);
+digitalWrite(lmotorpin1,LOW);
+digitalWrite(lmotorpin2,HIGH);
+}
+If(usbread==’40’) //loop to move RIGHT
+{
+digitalWrite(rmotorpin1,LOW);
+digitalWrite(rmotorpin2,HIGH);
+digitalWrite(lmotorpin1,HIGH);
+digitalWrite(lmotorpin2,LOW);
+}
+If(usbread==’25’) //to glow led
+{ digitalwrite(led,HIGH);
+}
+If(usbread==’30’) //to off led
+{ digitalwrite(led,LOW);
+}
+If(usbread==’61’) //LPG sensor data read and writing
+{
+value1= analogRead(lpgsensor);
+Serial.println(value1);
+}
+If(usbread==’62’) // MQ4 methane gas sensor
+{
+value2= analogRead(MQ4sensor);
+Serial.println(value2);}
+If(usbread==’63’) //MQ7 carbon monoxide sensor
+{
+value3= analogRead(MQ7sensor);
+Serial.println(value3);
+}
+If(usbread==’64’) //LDR sensor
+{
+Value4=analogRead(ldrsensor);
+Serial.println(value4);
+}
+If(usbread==’45’) // connect upper nails
+{
+digitalWrite(umotorpin1,HIGH);
+digitalWrite(umotorpin2,LOW);
+}
+If(usbread==’55’) //loose upper nails
+{
+digitalWrite(umotorpin1,LOW);
+digitalWrite(umotorpin2,HIGH);
+}
+If(usbread==’46’) // open
+{
+digitalWrite(cmotorpin1,LOW);
+digitalWrite(cmotorpin2,HIGH);
+}
+If(usbread==’56’) // close
+{
+digitalWrite(cmotorpin1,HIGH);
+digitalWrite(cmotorpin2,LOW);
+}
+If(usbread==’44’) //lower connect
+{
+digitalWrite(bmotorpin1,HIGH);
+digitalWrite(bmotorpin2,LOW);
+}
+If(usbread==’54’) // lower open
+{
+digitalWrite(bmotorpin1,LOW);
+digitalWrite(bmotorpin2,HIGH);
+}}
